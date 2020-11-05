@@ -17,9 +17,9 @@ ENV LC_ALL en_AU.UTF-8
 
 RUN apt-get update \
  && apt-get install -y curl unzip \
-    python3 python3-setuptools \
+    python3 python3-setuptools python3-pip \
  && ln -s /usr/bin/python3 /usr/bin/python \
- && easy_install pip py4j \
+ && pip3 install py4j \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
